@@ -1,4 +1,3 @@
-
 import boto3
 import bcrypt
 from dotenv import load_dotenv
@@ -12,7 +11,7 @@ class DynamoDBHelper():
     def __init__(self, table_name):
         self.table = None
         self.ACCESS_KEY_ID = os.getenv("ACCESS_KEY_ID")
-        self.ACCESS_SECRET_KEY = os.getenv("ACCESS_SECRET")
+        self.ACCESS_SECRET_KEY = os.getenv("ACCESS_SECRET_KEY")
         self.dynamodb = boto3.resource(
         'dynamodb',
         aws_access_key_id=self.ACCESS_KEY_ID,
